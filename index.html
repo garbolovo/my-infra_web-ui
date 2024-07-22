@@ -8,8 +8,72 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello, Universe!</h1>
-<p>Monitoring UI goes here</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #005f73;
+            color: #fff;
+            padding: 20px 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        nav a {
+            background: #0a9396;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #94d2bd;
+        }
+        footer {
+            background-color: #003566; /* Deep dark blue */
+            color: #ccc; /* Gray text */
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>Monitoring Resources</header>
+    <nav>
+        <a href="http://80.90.178.17:3000/" target="_blank">Grafana</a>
+        <a href="http://80.90.178.17:8080/zabbix.php?action=dashboard.list" target="_blank">Zabbix</a>
+        <a href="http://80.90.178.17:9090/graph?g0.expr=&g0.tab=1&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1h" target="_blank">Prometheus</a>
+        <a href="http://80.90.178.17:8081/containers/" target="_blank">cAdvisor</a>
+        <a href="http://80.90.178.17:9115" target="_blank">Blackbox Exporter</a>
+        <a href="http://80.90.178.17:9100" target="_blank">Node Exporter</a>
+    </nav>
+    <footer>
+        <a href="#" style="color: #ccc;">About</a> | 
+        <a href="#" style="color: #ccc;">Documents</a> | 
+        &copy; 2024
+    </footer>
 </body>
 </html>
-q
+</body>
+</html>
