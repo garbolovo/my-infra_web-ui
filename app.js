@@ -17,5 +17,10 @@ window.onclick = function (event) {
   }
 };
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    modal.style.display = "none";
+  }
+});
 
-console.log('Hello World !')
+
