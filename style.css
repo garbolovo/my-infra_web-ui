@@ -62,8 +62,8 @@ footer {
 .popup-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 1200px;
 }
 .popup-content img {
     width: 100%;
@@ -81,4 +81,8 @@ footer {
 }
 .close:hover {
     color: #bbb;
+}
+
+.picture img, .popup-content img {
+    cursor: pointer;
 }
