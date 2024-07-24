@@ -1,62 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Monitoring Tools UI</title>
-</head>
-<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoring Resources</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background: #005f73;
-            color: #fff;
-            padding: 20px 20px;
-            text-align: center;
-            font-size: 24px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        nav a {
-            background: #0a9396;
-            color: #fff;
-            padding: 10px 15px;
-            margin: 0 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-        nav a:hover {
-            background-color: #94d2bd;
-        }
-        footer {
-            background-color: #003566; /* Deep dark blue */
-            color: #ccc; /* Gray text */
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Monitoring Tools UI</title>
 </head>
 <body>
     <header>Monitoring Resources</header>
@@ -71,17 +20,24 @@
         <a href="http://194.226.49.20:9100" target="_blank">Node Exporter P</a>
         <a href="http://85.159.231.169:9100" target="_blank">Node Exporter Z</a>
     </nav>
-
     <section class="picture" style="text-align: center;">
         <p class="picture-title">Infrastructure Diagram</p>
-        <img src="assets/infra.jpg" alt="Infrastructure Diagram" width="600" height="300">
+        <img id="myImg" src="assets/infra.jpg" alt="Infrastructure Diagram" width="600" height="300">
     </section>
+
+    <div id="myModal" class="popup">
+        <span class="close">&times;</span>
+        <div class="popup-content">
+            <img src="assets/infra.jpg" alt="Infrastructure Diagram">
+        </div>
+    </div>
+    
+
     <footer>
         <a href="#" style="color: #ccc;">About</a> | 
         <a href="#" style="color: #ccc;">Documents</a> | 
         &copy; 2024
     </footer>
-</body>
-</html>
+    <script src="app.js"></script>
 </body>
 </html>
