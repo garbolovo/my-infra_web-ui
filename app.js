@@ -1,26 +1,24 @@
-const modal = document.getElementById("myModal");
-const img = document.getElementById("myImg");
-const modalImg = document.querySelector(".popup-content img");
-const span = document.getElementsByClassName("close")[0];
+const dialog = document.getElementById("diagram-dialog");
+const openButton = document.querySelector(".diagram-button");
+const closeButton = document.querySelector(".close-button");
+const currentYear = document.getElementById("current-year");
 
-img.onclick = function () {
-  modal.style.display = "block";
-};
+if (dialog && openButton && closeButton) {
+  openButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
 
-span.onclick = function () {
-  modal.style.display = "none";
-};
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+}
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    modal.style.display = "none";
-  }
-});
-
-
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}

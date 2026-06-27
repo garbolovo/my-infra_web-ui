@@ -1,5 +1,48 @@
-<p>to describe processes how to deploy and etc</p>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Deployment notes for the infrastructure console.">
+    <link rel="stylesheet" href="style.css">
+    <title>Deployment Notes | Infrastructure Console</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div>
+                <p class="eyebrow">Documentation</p>
+                <h1>Deployment Notes</h1>
+            </div>
+            <a class="docs-link" href="index.html">Back to console</a>
+        </div>
+    </header>
 
-<p>create bare repo</p>
+    <main>
+        <article class="services" aria-labelledby="deployment-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Continuous deployment</p>
+                    <h2 id="deployment-title">How this site is published</h2>
+                </div>
+            </div>
 
-<p>I need steps to describe how to bind local branch with the bare </p>
+            <div class="service-card">
+                <span class="service-name">Deployment flow</span>
+                <span class="service-description">
+                    Changes are pushed to GitHub for source storage and to the server bare repository
+                    <code>/var/repo/mywebsite.git</code>. Its <code>post-receive</code> hook checks out
+                    the current <code>master</code> branch into the web root.
+                </span>
+                <span class="service-port">git push web-ui master</span>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>Personal infrastructure console <span id="current-year"></span></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
