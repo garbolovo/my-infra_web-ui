@@ -33,7 +33,9 @@
                 <span class="service-description">
                     Changes are pushed to GitHub for source storage and to the server bare repository
                     <code>/var/repo/mywebsite.git</code>. Its <code>post-receive</code> hook checks out
-                    the current <code>master</code> branch into the web root.
+                    the current <code>master</code> branch into the web root. Nginx serves the site at
+                    <code>https://infra.194-226-49-20.sslip.io</code>; its versioned configuration is
+                    stored in <code>deploy/nginx/infra-console.conf</code>.
                 </span>
                 <span class="service-port">git push web-ui master</span>
             </div>
