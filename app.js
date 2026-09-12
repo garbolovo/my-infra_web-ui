@@ -1,7 +1,7 @@
 const dialog = document.getElementById("diagram-dialog");
 const openButton = document.querySelector(".diagram-button");
 const closeButton = document.querySelector(".close-button");
-const currentYear = document.getElementById("current-year");
+const currentYearEl = document.getElementById("current-year");
 
 if (dialog && openButton && closeButton) {
   openButton.addEventListener("click", () => {
@@ -19,6 +19,6 @@ if (dialog && openButton && closeButton) {
   });
 }
 
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
+if (currentYearEl) {
+  currentYearEl.textContent = new Date().getFullYear();
 }
